@@ -22,6 +22,6 @@ class workofArt():
         
     def dosyayaz(self):
         dosya.writelines(self.erisimliste)
-        dosya.close()
-    
+
+
 
