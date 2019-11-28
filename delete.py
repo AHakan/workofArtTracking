@@ -29,11 +29,13 @@ class deleteArt():
         self.silveri=self.silveri+ dosya.readlines()
         self.indx=self.silveri.index(self.veri)
         self.silveri.remove(self.veri)
+        print("Veri işaretleniyor...")
         self.silveri.insert(self.indx, self.veri2)
         print(self.silveri)
+        print("Veri siliniyor...")
         self.silveri.remove(self.veri2)
         a=" "
-        a=a*100
+        a=a*100+"\n"
         self.silveri.append(a)
 
         #dosya.seek(0)

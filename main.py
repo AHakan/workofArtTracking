@@ -68,3 +68,4 @@ while True:
             silverilist = silArt.silveri
             dosya.seek(0)
             dosya.writelines(silverilist)
+            print("Veri silindi...")
