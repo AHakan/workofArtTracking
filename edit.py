@@ -21,5 +21,5 @@ class edit():
         self.dosyaduzenle()
 
     def dosyaduzenle(self):
-        print("duzenlenecek")
+        print(erisimListe)
 

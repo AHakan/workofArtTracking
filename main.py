@@ -4,14 +4,13 @@
 import sys
 import work
 import edit
+import delete
 
-dosya=open("eserliste.txt", "r+")
-
-a=dosya.readlines()
-
-print(a)
+dosya = open("eserliste.txt", "r+")
+a = dosya.readlines()
 
 while True:
+    # print(a)
     isim = input("Lütfen eserin ismini giriniz: ")
     isimkontrol=""
     if len(isim) > 15:
@@ -58,3 +57,14 @@ while True:
         print(eski)
         duzenle=edit.edit(isim, tur, sahip, id)
 
+
+    if secim=="3":
+        kontrol = a.count(isim + " " + tur + " " + sahip + " " + id + "\n")
+        if kontrol == 0:
+            print("*---Bu kayıt liste de yok---*")
+            continue
+        else:
+            silArt=delete.deleteArt(isim, tur, sahip, id)
+            silverilist = silArt.silveri
+            dosya.seek(0)
+            dosya.writelines(silverilist)
