@@ -37,9 +37,3 @@ class deleteArt():
         a=" "
         a=a*100+"\n"
         self.silveri.append(a)
-
-        #dosya.seek(0)
-        #dosya.writelines(self.silveri)
-        #print(self.silveri)
-        #print(dosya.readlines())
-        #print(self.erisimliste)

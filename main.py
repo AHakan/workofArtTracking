@@ -2,7 +2,7 @@
 #-*-coding:utf-8-*-
 
 import sys
-import work
+import add
 import edit
 import delete
 
@@ -41,7 +41,7 @@ while True:
             print("*---Bu kayıt liste de var---*")
             continue
         else:
-            eser=work.workofArt(isim, tur, sahip, id)
+            eser=add.addArt(isim, tur, sahip, id)
         print(eser.erisimliste)
         cikis=input("İşlemlere devam etmek için D'ye, Çıkış için C ye basınız: ")
         if cikis=="C" or cikis=="c":
@@ -52,10 +52,18 @@ while True:
         #Ekstra girdiler kontrol edilmeli.
 
     if secim=="2":
-        #eksik
-        eski = a.index(isim + " " + tur + " " + sahip + " " + id + "\n")
-        print(eski)
-        duzenle=edit.edit(isim, tur, sahip, id)
+        kontrol=a.count(isim+" "+tur+" "+sahip+" "+id+"\n")
+        if kontrol==0:
+            print("*---Bu kayıt liste de yok---*")
+            continue
+        else:
+            degisArt=edit.editArt(isim, tur, sahip, id)
+            degisverilist=degisArt.degisveri
+            dosya.seek(0)
+            dosya.writelines(degisverilist)
+            print("Veri güncellendi.")
+            print("Çıkış yapılıyor...")
+            sys.exit()
 
 
     if secim=="3":
@@ -68,4 +76,6 @@ while True:
             silverilist = silArt.silveri
             dosya.seek(0)
             dosya.writelines(silverilist)
-            print("Veri silindi...")
+            print("Veri silindi.")
+            print("Çıkış yapılıyor...")
+            sys.exit()

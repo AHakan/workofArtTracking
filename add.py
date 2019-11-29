@@ -3,7 +3,7 @@
 
 dosya=open("eserliste.txt","a+")
 
-class workofArt():
+class addArt():
     erisimliste=[]
     
     def __init__(self, isim, tur, sahip, id):
