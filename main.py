@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 
 import sys
 import time
@@ -64,9 +64,10 @@ while True:
             degisverilist=degisArt.degisveri
             dosya.seek(0)
             dosya.writelines(degisverilist)
+            time.sleep(2)
             print("Veri güncellendi.")
             print("Çıkış yapılıyor...")
-            time.sleep(3)
+            time.sleep(2)
             print("Çıkış yapıldı.")
             sys.exit()
 
@@ -81,8 +82,9 @@ while True:
             silverilist = silArt.silveri
             dosya.seek(0)
             dosya.writelines(silverilist)
+            time.sleep(2)
             print("Veri silindi.")
             print("Çıkış yapılıyor...")
-            time.sleep(3)
+            time.sleep(2)
             print("Çıkış yapıldı.")
             sys.exit()
