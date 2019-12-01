@@ -17,8 +17,9 @@ while True:
     if parametre=="2":
         tur=input("Lütfen türü giriniz:")
         ara=search.ara(tur, "2")
-
-
-    #if parametre=="3":
-
-    #if parametre=="4":
+    if parametre=="3":
+        sahip=input("Lütfen eser sahibinin adını giriniz:")
+        ara=search.ara(sahip, "3")
+    if parametre=="4":
+        id=input("Lütfen eser sahibinin adını giriniz:")
+        ara=search.ara(str(id), "4")

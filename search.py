@@ -64,7 +64,52 @@ class ara():
         if self.l == 0:
             print("Aradığınız tür de kayıt yoktur. \n")
 
+    def sahipara(self):
+        self.l = 0
+        self.count = 8
+        for i in range(0, len(oku)):
+            for k in range(8, 24):
+                if oku[i][k] != " ":
+                    self.count = self.count+1
+                else:
+                    for n in range(self.count+1, 24):
+                        self.dosyaread = self.dosyaread + oku[i][n]
+                        if self.dosyaread == self.parametre:
+                            time.sleep(1)
+                            print(oku[i])
+                            self.l = self.l + 1
 
+                    self.count = 8
+                    break
 
+            self.dosyaread = ""
 
+        if self.l != 0:
+            print(str(self.l) + " Değer bulundu.\n")
+        if self.l == 0:
+            print("Aradığınız eser sahibine ait kayıt yoktur. \n")
 
+    def idara(self):
+        self.l = 0
+        self.count = 16
+        for i in range(0, len(oku)):
+            for k in range(16, 32):
+                if oku[i][k] != " ":
+                    self.count = self.count + 1
+                else:
+                    for n in range(self.count + 1, 32):
+                        self.dosyaread = self.dosyaread + oku[i][n]
+                        if self.dosyaread == self.parametre:
+                            time.sleep(1)
+                            print(oku[i])
+                            self.l = self.l + 1
+
+                    self.count = 16
+                    break
+
+            self.dosyaread = ""
+
+        if self.l != 0:
+            print(str(self.l) + " Değer bulundu.\n")
+        if self.l == 0:
+            print("Aradığınız id de kayıt yoktur. \n")
