@@ -2,6 +2,7 @@
 #-*-coding:utf-8-*-
 
 import sys
+import time
 import add
 import edit
 import delete
@@ -46,6 +47,8 @@ while True:
         cikis=input("İşlemlere devam etmek için D'ye, Çıkış için C ye basınız: ")
         if cikis=="C" or cikis=="c":
             print("Çıkış yapılıyor...")
+            time.sleep(3)
+            print("Çıkış yapıldı.")
             sys.exit()
         elif cikis=="D" or cikis=="d":
             continue
@@ -63,6 +66,8 @@ while True:
             dosya.writelines(degisverilist)
             print("Veri güncellendi.")
             print("Çıkış yapılıyor...")
+            time.sleep(3)
+            print("Çıkış yapıldı.")
             sys.exit()
 
 
@@ -78,4 +83,6 @@ while True:
             dosya.writelines(silverilist)
             print("Veri silindi.")
             print("Çıkış yapılıyor...")
+            time.sleep(3)
+            print("Çıkış yapıldı.")
             sys.exit()
