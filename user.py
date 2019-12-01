@@ -16,6 +16,7 @@ while True:
         ara=search.ara(isim, "1")
     if parametre=="2":
         tur=input("Lütfen türü giriniz:")
+        ara=search.ara(tur, "2")
 
 
     #if parametre=="3":

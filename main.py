@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*-coding:utf-8-*-
+#-*-coding:utf-8-*-
 
 import sys
 import time
@@ -11,22 +11,18 @@ dosya = open("eserliste.txt", "r+")
 a = dosya.readlines()
 
 while True:
-    # print(a)
     isim = input("Lütfen eserin ismini giriniz: ")
-    isimkontrol=""
-    if len(isim) > 15:
+    if len(isim) > 7:
         sys.exit()
-            
     tur = input("Lütfen eserin türünü giriniz: ")
-    if len(tur) > 15:
+    if len(tur) > 7:
         sys.exit()
-        
     sahip = input("Lütfen eserin sahibini giriniz: ")
-    if len(sahip) > 15:
+    if len(sahip) > 7:
         sys.exit()
             
     id = input("Lütfen eserin id numarasını giriniz: ")
-    if len(id) > 15:
+    if len(id) > 7:
         sys.exit()
 
     print("""
@@ -44,15 +40,11 @@ while True:
         else:
             eser=add.addArt(isim, tur, sahip, id)
         print(eser.erisimliste)
-        cikis=input("İşlemlere devam etmek için D'ye, Çıkış için C ye basınız: ")
-        if cikis=="C" or cikis=="c":
-            print("Çıkış yapılıyor...")
-            time.sleep(3)
-            print("Çıkış yapıldı.")
-            sys.exit()
-        elif cikis=="D" or cikis=="d":
-            continue
-        #Ekstra girdiler kontrol edilmeli.
+        print("Eser eklendi.")
+        print("Çıkış yapılıyor...")
+        time.sleep(3)
+        print("Çıkış yapıldı.")
+        sys.exit()
 
     if secim=="2":
         kontrol=a.count(isim+" "+tur+" "+sahip+" "+id+"\n")
